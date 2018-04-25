@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TEST</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="JavaScript">
+        <meta name="description" content="Test page for JavaScript experimentation">
+        <meta name="author" content="Murph Strange">
+        <link rel="stylesheet" type="text/css" href="theme.css">
+        <script src="jquery-1.11.1.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body id="woot">
+        <div id="header">
+            <img src="menu_button.png" id="menu_open">
+            <h1>JavaScript Function Test</h1>
+            <ul>
+                <li class="tabs" id="script_tab">Script</li>
+                <li class="tabs" id="faq_tab">FAQ</li>
+                <li class="tabs" id="resources_tab">Resources</li>
+            </ul>
+
+        </div>
+
+        <div id="content">
+            <div id="script">
+            <p id="hello"></p>
+            <button type="button" onclick="helloWorld()">Click It!</button>
+            <p id="today"></p>
+            <button type="button" onclick="whenAmI()">What's Today?</button>
+        	<div id="printer"></div>
+        	<input type="text" id="incoming"></input>
+        	<button type="button" onclick="tryInput()">OK!</button>
+        	<button type="button" onclick="clear_printer()">Clear!</button>
+        	<input type="text" id="colorbox"></input>
+        	<button type="button" onclick="colorButton()">Apply</button>
+        	<input type="text" id="colorbox2"></input>
+        	<button type="button" onclick="colorButton2()">Apply</button>
+        	<div>
+            	<div style="float: left; clear: left;">
+                	<img src="lightbulb.png" style="width:145px; height:152px; margin-left:auto; margin-right:auto; margin-top:10px;" id="lightbulb" onMouseOver="document.getElementById('lightbulb').src='lightbulb_on.png';" onMouseOut="document.getElementById('lightbulb').src='lightbulb.png';" />
+            	</div>
+            	<div style="height:22px; width:145px; margin:7px; padding-top:130px; float: right;" class="liteOff" id="socket">
+                	<button type="button" id="switch" onclick="$('#socket').toggleClass('liteOff');$('#socket').toggleClass('liteOn');">On</button>
+            	</div>
+        	</div>
+            </div>
+            <div id="faq">
+                <p>
+                    <dl>
+                        <dt>What exactly are we looking at here?</dt>
+                        <dd>This is the proof of concept build for my enhanced script interface for five9.</dd>
+                        <dt>Is it dangerous?</dt>
+                        <dd>No. It uses CSS and JavaScript to bring better functionality to the scripts we already use.</dd>
+                        <dt>What's the benefit?</dt>
+                        <dd>Scripts that are easier to maintain; even though this looks more complicated, virtually all of the complicated bits are self contained and can be used in every script, and the product specific parts are easy to identify and modify without breaking the functionality. Also, by utilizing the full functionality of HTML and JavaScript, our scripts actually help agents reduce mistakes in data entry, and puts more information in easy to find areas.</dd>
+                        <dt>Does it have to look like this?</dt>
+                        <dd>You don't like it? Ouch. Just kidding. The look and feel is entirely customizable. Want the contact panel to appear from the right istead of the left? Easy. Don't like the three shades of boring this script is rendered in? Not a problem. If each team that uses five9 wants a theme that's all their own, that's a possibility too!</dd>
+                     
+                    </dl>
+                </p>
+            </div>
+
+            <div id="resources">
+                <p>
+                    This page is for commonly used bookmarks to client websites, validation sites, or even application files (PDFs) and training material normally buried in folders on the L drive. It can be customized on a per product basis, so only those links needed for this program appear here. All these links go to Bing, but you can set them to anywhere, and each one opens a new window.
+                <ul>
+                    <li><a href="http://www.bing.com/" target="_blank">Product Lookup</a></li>
+                 <li><a href="http://www.bing.com/" target="_blank">Validation</a></li>
+                 <li><a href="http://www.bing.com/" target="_blank">Client Product Site</a></li>
+                </ul>
+                </p>
+            </div>
+
+		</div>
+
+		<div id="footer">
+	        
+            <div style="clear: both;">
+    	        <input type="text" id="task"></input>
+    	        <button type="button" id="add">Add Task</button>
+    	        <div id="schedule"></div>
+    	    </div>
+		</div>
+        <!-- To make a clear button
+            <button type="button" onclick="dealGame()">New Game</button>
+            <button type="button" onclick="clear_printer()">Clear!</button>
+            <button type="button" onclick="fizzBuzz()">FizzBuzz!</button>
+        -->
+        <!-- to make a browser window
+            <iframe src="http://www.bing.com/" width="100%" height="100%" id="window">
+        -->
+        <!-- Navigation for the frame
+            <input type="text" id="address"></input>
+            <button type="button" onclick="goButton()">Go</button>
+        -->
+        <!-- Color changer box
+            <input type="text" id="colorbox"></input>
+            <button type="button" onclick="colorButton()">Apply</button>
+        -->
+    <div id="contactInfo">
+        <img src="menu_button.png" id="menu_close">
+        <h3>CONTACT INFORMATION</h3>
+        <input type="text" id="in_firstName"size="12" onblur="changeFirstName()"></input>
+        <input type="text" id="in_lastName" size="12" onblur="changeLastName()"></input><br>
+        <input type="text" id="in_address1" size="32" onblur="changeAddress1()"></input><br>
+        <input type="text" id="in_address2" size="32" onblur="changeAddress2()"></input><br>
+        <input type="text" id="in_city" size="12" onblur="changeCity()"></input>
+        <select id="in_state" onchange="stateSelect()">
+            <option value="AL"><!--Alabama-->Ala.</option>
+            <option value="AK"><!--Alaska-->Alaska</option>
+            <option value="AZ"><!--Arizona-->Ariz.</option>
+            <option value="AR"><!--Arkansas-->Ark.</option>
+            <option value="CA"><!--California-->Calif.</option>
+            <option value="CO"><!--Colorado-->Colo.</option>
+            <option value="CT"><!--Connecticut-->Conn.</option>
+            <option value="DE"><!--Delaware-->Del.</option>
+            <option value="DC"><!--District of Columbia-->D.C.</option>
+            <option value="FL"><!--Florida-->Fla.</option>
+            <option value="GA"><!--Georgia-->Ga.</option>
+            <option value="HI"><!--Hawaii-->Hawaii</option>
+            <option value="ID"><!--Idaho-->Idaho</option>
+            <option value="IL"><!--Illinois-->Ill.</option>
+            <option value="IN"><!--Indiana-->Ind.</option>
+            <option value="IA"><!--Iowa-->Iowa</option>
+            <option value="KS"><!--Kansas-->Kans.</option>
+            <option value="KY"><!--Kentucky-->Ky.</option>
+            <option value="LA"><!--Louisiana-->La.</option>
+            <option value="ME"><!--Maine-->Maine</option>
+            <option value="MD"><!--Maryland-->Md.</option>
+            <option value="MA"><!--Massachusetts-->Mass.</option>
+            <option value="MI"><!--Michigan-->Mich.</option>
+            <option value="MN"><!--Minnesota-->Minn.</option>
+            <option value="MS"><!--Mississippi-->Miss.</option>
+            <option value="MO"><!--Missouri-->Mo.</option>
+            <option value="MT"><!--Montana-->Mont.</option>
+            <option value="NE"><!--Nebraska-->Nebr.</option>
+            <option value="NV"><!--Nevada-->Nev.</option>
+            <option value="NH"><!--New Hampshire-->N.H.</option>
+            <option value="NJ"><!--New Jersey-->N.J.</option>
+            <option value="NM"><!--New Mexico-->N.Mex.</option>
+            <option value="NY"><!--New York-->N.Y.</option>
+            <option value="NC"><!--North Carolina-->N.C.</option>
+            <option value="ND"><!--North Dakota-->N.Dak.</option>
+            <option value="OH"><!--Ohio-->Ohio</option>
+            <option value="OK"><!--Oklahoma-->Okla.</option>
+            <option value="OR"><!--Oregon-->Oreg.</option>
+            <option value="PA"><!--Pennsylvania-->Pa.</option>
+            <option value="RI"><!--Rhode Island-->R.I.</option>
+            <option value="SC"><!--South Carolina-->S.C.</option>
+            <option value="SD"><!--South Dakota-->S.Dak.</option>
+            <option value="TN"><!--Tennessee-->Tenn.</option>
+            <option value="TX"><!--Texas-->Tex.</option>
+            <option value="UT"><!--Utah-->Utah</option>
+            <option value="VT"><!--Vermont-->Vt.</option>
+            <option value="VA"><!--Virginia-->Va.</option>
+            <option value="WA"><!--Washingtion-->Wash.</option>
+            <option value="WV"><!--West Virginia-->W.Va.</option>
+            <option value="WI"><!--Wisconsin-->Wis.</option>
+            <option value="WY"><!--Wyoming-->Wyo.</option>
+        </select>
+        <input type="text" id="in_zipCode" size="6" onblur="changeZipCode()"></input><br>
+        <br>
+        <span id="out_firstName"></span>&nbsp;<span id="out_lastName"></span><br>
+        <span id="out_address1"></span><br>
+        <span id="out_address2"></span><br id="teehee">
+        <span id="out_city"></span>&nbsp;<span id="out_state"></span>&nbsp;<span id="out_zipCode"></span>
+
+    </div>
+    </body>
+</html>
